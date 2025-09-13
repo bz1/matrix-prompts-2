@@ -4,36 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --matrix-green: #00FF41;
+        }
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #000;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--matrix-green);
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .glitch {
+            animation: text-flicker 0.05s infinite alternate;
         }
-        h1 {
-            color: #333;
-            text-align: center;
+
+
+        @keyframes text-flicker {
+            0% { text-shadow: -1px -1px 0 var(--matrix-green), 1px 1px 0 var(--matrix-green); }
+            20% { text-shadow: -1px 0 0 var(--matrix-green), 1px 0 0 var(--matrix-green); }
+            40% { text-shadow: -1px 1px 0 var(--matrix-green), 1px -1px 0 var(--matrix-green); }
+            60% { text-shadow: 1px -1px 0 var(--matrix-green), -1px 1px 0 var(--matrix-green); }
+            80% { text-shadow: 1px 0 0 var(--matrix-green), -1px 0 0 var(--matrix-green); }
+            100% { text-shadow: 1px 1px 0 var(--matrix-green), -1px -1px 0 var(--matrix-green); }
         }
-        p {
-            line-height: 1.6;
-            color: #666;
+
+
+        .link-card {
+            background-color: rgba(0, 255, 65, 0.1);
+            border: 1px solid var(--matrix-green);
+            transition: all 0.3s ease;
+        }
+        .link-card:hover {
+            box-shadow: 0 0 15px var(--matrix-green);
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Matrix Prompts</h1>
-        <p>Welcome to Matrix Prompts - your landing page for AI prompts and interactions.</p>
-        <p>This is a placeholder landing page. You can customize this content as needed.</p>
+<body class="p-4 md:p-12">
+    <div class="flex flex-col items-center justify-center min-h-screen text-center">
+        <p class="text-2xl md:text-3xl mb-8 animate-pulse">
+            SELECT CATEGORY TO ACCESS_PROMPT_DATABASE.
+        </p>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+            <a href="https://www.notion.so/Customer-Support-999-Ultimate-ChatGPT-Prompts-To-Copy-Paste-180-tasks-8c1eefd69d4745dfa5d87ad97db7ebcc?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Customer Support
+            </a>
+            <a href="https://www.notion.so/Real-Estate-999-Ultimate-ChatGPT-Prompts-To-Copy-Paste-200-tasks-175bc4975a6a457587b5769d739e35c6?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Real Estate
+            </a>
+            <a href="https://www.notion.so/Productivity-1099-Ultimate-ChatGPT-Prompts-To-Copy-Paste-219-tasks-4b39ce80690e4f30b40c4fee13d00774?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Productivity
+            </a>
+            <a href="https://www.notion.so/Web-Development-999-Ultimate-ChatGPT-Prompts-To-Copy-Paste-199-tasks-94fac8b677f544d5be808722610d5120?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Web Development
+            </a>
+            <a href="https://www.notion.so/Marketing-1099-Ultimate-ChatGPT-Marketing-Prompts-To-Copy-Paste-200-tasks-b71ac2a13971465e87e2a97d5db5d6c3?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Marketing
+            </a>
+            <a href="https://www.notion.so/Startups-1099-Ultimate-ChatGPT-Prompts-To-Copy-Paste-219-tasks-b3ca3da9b34f4fc291bbe2ff8114d38e?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Startups
+            </a>
+            <a href="https://www.notion.so/Sales-999-Ultimate-ChatGPT-Sales-Prompts-To-Copy-Paste-250-tasks-aa5278706e8c4f3193639e1239c68eb2?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                Sales
+            </a>
+            <a href="https://www.notion.so/VA-999-Ultimate-ChatGPT-Prompts-To-Copy-Paste-180-tasks-1592b9b90c8c4f16bd99ebb05cc4e7f7?source=copy_link" target="_blank" class="link-card p-6 rounded-lg text-xl md:text-2xl transition-all">
+                VA
+            </a>
+        </div>
     </div>
 </body>
 </html>
